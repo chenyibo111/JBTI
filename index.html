@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>股票市场角色测试 - 测测你是哪种股民</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- 开始页面 -->
+    <div id="start-screen" class="screen active">
+      <h1>📈 股票市场角色测试</h1>
+      <p class="subtitle">20 道题，测测你是哪种股民</p>
+      
+      <div class="intro-cards">
+        <div class="card">
+          <span class="icon">🐢</span>
+          <h3>风险偏好</h3>
+          <p>保守派 vs 激进派</p>
+        </div>
+        <div class="card">
+          <span class="icon">📊</span>
+          <h3>决策风格</h3>
+          <p>数据党 vs 直觉派</p>
+        </div>
+        <div class="card">
+          <span class="icon">⚡</span>
+          <h3>持仓周期</h3>
+          <p>短线王 vs 长期主义</p>
+        </div>
+        <div class="card">
+          <span class="icon">😱</span>
+          <h3>情绪控制</h3>
+          <p>情绪化 vs 冷血机器</p>
+        </div>
+      </div>
+      
+      <button id="start-btn" class="btn-primary">开始测试</button>
+    </div>
+
+    <!-- 答题页面 -->
+    <div id="quiz-screen" class="screen">
+      <div class="progress-header">
+        <div class="progress-info">
+          <span>问题 <span id="current-num">1</span> / 20</span>
+          <span id="progress-percent">0%</span>
+        </div>
+        <div class="progress-bar">
+          <div id="progress-fill"></div>
+        </div>
+      </div>
+
+      <div class="question-card">
+        <h2 id="question-text"></h2>
+        <div id="options-container" class="options"></div>
+      </div>
+
+      <div class="nav-buttons">
+        <button id="prev-btn" class="btn-secondary" disabled>上一题</button>
+        <button id="next-btn" class="btn-primary" disabled>下一题</button>
+      </div>
+    </div>
+
+    <!-- 结果页面 -->
+    <div id="result-screen" class="screen">
+      <div class="result-header">
+        <span class="result-emoji" id="result-emoji">🏆</span>
+        <h1 id="result-title"></h1>
+        <p id="result-subtitle" class="result-subtitle"></p>
+      </div>
+
+      <div class="score-details">
+        <h3>📊 你的维度画像</h3>
+        <div id="dimension-bars"></div>
+      </div>
+
+      <div class="result-comment">
+        <h3>💬 专属评语</h3>
+        <p id="result-comment"></p>
+      </div>
+
+      <div class="result-advice">
+        <h3>📋 给你的建议</h3>
+        <p id="result-advice"></p>
+      </div>
+
+      <div class="share-section">
+        <button id="share-btn" class="btn-primary">分享我的结果</button>
+        <button id="restart-btn" class="btn-secondary">重新测试</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
